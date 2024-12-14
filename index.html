@@ -90,43 +90,6 @@
             margin-top: 20px;
         }
 
-        /* Modal styling */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
-            overflow: auto;
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 5% auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 500px;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
         /* Media queries for mobile responsiveness */
         @media (max-width: 768px) {
             .navigation {
@@ -135,21 +98,6 @@
 
             .menu-toggle {
                 display: block;
-            }
-
-            .video-feed {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .video-card {
-                max-width: 100%;
-                width: 90%;
-            }
-
-            .modal-content {
-                width: 90%;
-                margin: 10% auto;
             }
         }
 
@@ -180,16 +128,23 @@
     </header>
 
     <main>
-        <!-- Video Feed -->
+        <!-- First Ad Code (Profitable CPM Rate) -->
+        <div class="adsterra-ad">
+            <script async type="text/javascript" src="https://www.profitablecpmrate.com/a20w5mste?key=d37cb83a19063b033f325a9cead53a29"></script>
+        </div>
+
+        <!-- Second Ad Code (Slick Quiver) -->
+        <div class="slickquiver-ad">
+            <script async type="text/javascript" src="https://slickquiver.com/a0if9meyaq?key=af05831971b2a4a3a3b921b808d94603"></script>
+        </div>
+
         <div class="video-feed">
             <!-- Video card 1 -->
             <div class="video-card">
-                <a href="#">
-                    <video controls>
-                        <source src="video1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </a>
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="video-info">
                     <h3>Video Title 1</h3>
                     <p>Description of the video...</p>
@@ -203,12 +158,10 @@
 
             <!-- Video card 2 -->
             <div class="video-card">
-                <a href="#">
-                    <video controls>
-                        <source src="video2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </a>
+                <video controls>
+                    <source src="video 2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="video-info">
                     <h3>Video Title 2</h3>
                     <p>Description of the video...</p>
@@ -219,16 +172,25 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Modal for Ad -->
-        <div id="adModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Special Offer</h2>
-                <p>Click below to check out the amazing offer!</p>
-                <a href="https://slickquiver.com/e2gbdipd0w?key=3cd30e8ce72a2e62b27a540dbd85d2d6" target="_blank">Visit Offer</a>
+            <!-- Video card 3 -->
+            <div class="video-card">
+                <video controls>
+                    <source src="video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-info">
+                    <h3>Video Title 3</h3>
+                    <p>Description of the video...</p>
+                    <div class="video-actions">
+                        <button>Like</button>
+                        <button>Comment</button>
+                        <button>Share</button>
+                    </div>
+                </div>
             </div>
+
+            <!-- Add more video cards as needed -->
         </div>
     </main>
 
@@ -237,22 +199,10 @@
     </footer>
 
     <script>
-        // Function to show the modal automatically on page load
-        window.onload = function() {
-            document.getElementById("adModal").style.display = "block"; // Show the modal when page loads
+        function toggleMenu() {
+            const nav = document.querySelector('.navigation');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
         }
-
-        // Function to close the modal
-        function closeModal() {
-            document.getElementById("adModal").style.display = "none"; // Hide the modal
-        }
-
-        // Close modal if clicked outside
-        window.onclick = function(event) {
-            if (event.target == document.getElementById("adModal")) {
-                closeModal();
-            }
-        };
     </script>
 </body>
 </html>
