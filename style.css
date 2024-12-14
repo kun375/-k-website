@@ -20,6 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .logo img {
@@ -61,6 +62,8 @@ main {
     gap: 20px;
     width: 100%;
     max-width: 1200px;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 .video-card {
@@ -68,6 +71,11 @@ main {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
 }
 
 .video-card video {
@@ -100,6 +108,7 @@ main {
     cursor: pointer;
     font-size: 0.9em;
     margin-right: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .video-actions button:hover {
@@ -159,6 +168,8 @@ header .navigation.show {
     padding: 10px;
     font-size: 16px;
     margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
 }
 
 button {
@@ -167,6 +178,8 @@ button {
     color: white;
     font-size: 16px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
 
 button:hover {
