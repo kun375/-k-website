@@ -66,7 +66,6 @@
         video {
             width: 100%;
             height: auto;
-            border-bottom: 1px solid #ccc; /* added line for separation */
         }
 
         .video-info {
@@ -89,6 +88,43 @@
             background-color: #333;
             color: white;
             margin-top: 20px;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
+            overflow: auto;
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         /* Media queries for mobile responsiveness */
@@ -129,20 +165,16 @@
     </header>
 
     <main>
-        <!-- Display the ad as an alert when the page loads -->
-        <script>
-            window.onload = function() {
-                alert("Check out this offer: \n\n Visit this link for amazing offers: https://slickquiver.com/e2gbdipd0w?key=3cd30e8ce72a2e62b27a540dbd85d2d6");
-            }
-        </script>
-
+        <!-- Video Feed with clickable links -->
         <div class="video-feed">
             <!-- Video card 1 -->
             <div class="video-card">
-                <video controls>
-                    <source src="video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <a href="#" id="video1Link">
+                    <video controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </a>
                 <div class="video-info">
                     <h3>Video Title 1</h3>
                     <p>Description of the video...</p>
@@ -156,10 +188,12 @@
 
             <!-- Video card 2 -->
             <div class="video-card">
-                <video controls>
-                    <source src="video2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <a href="#" id="video2Link">
+                    <video controls>
+                        <source src="video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </a>
                 <div class="video-info">
                     <h3>Video Title 2</h3>
                     <p>Description of the video...</p>
@@ -170,25 +204,16 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Video card 3 -->
-            <div class="video-card">
-                <video controls>
-                    <source src="video3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-info">
-                    <h3>Video Title 3</h3>
-                    <p>Description of the video...</p>
-                    <div class="video-actions">
-                        <button>Like</button>
-                        <button>Comment</button>
-                        <button>Share</button>
-                    </div>
-                </div>
+        <!-- Modal for Ad -->
+        <div id="adModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Special Offer</h2>
+                <p>Click below to check out the amazing offer!</p>
+                <a href="https://slickquiver.com/e2gbdipd0w?key=3cd30e8ce72a2e62b27a540dbd85d2d6" target="_blank">Visit Offer</a>
             </div>
-
-            <!-- Add more video cards as needed -->
         </div>
     </main>
 
@@ -197,10 +222,27 @@
     </footer>
 
     <script>
-        function toggleMenu() {
-            const nav = document.querySelector('.navigation');
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        // Function to show the modal when a link is clicked
+        function showAdModal(event) {
+            event.preventDefault(); // Prevent link navigation
+            document.getElementById("adModal").style.display = "block"; // Show the modal
         }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("adModal").style.display = "none"; // Hide the modal
+        }
+
+        // Add event listeners for video links
+        document.getElementById("video1Link").addEventListener("click", showAdModal);
+        document.getElementById("video2Link").addEventListener("click", showAdModal);
+
+        // Close modal if clicked outside
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("adModal")) {
+                closeModal();
+            }
+        };
     </script>
 </body>
 </html>
