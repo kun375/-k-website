@@ -1,0 +1,5 @@
+<!-- Adsterra Ad Code -->
+<div class="adsterra-ad">
+    <script async src="https://cdn.adsterra.com/js/ads.js"></script>
+    <ins class="adsbyadsterra" style="display:block" data-adsterra-id="your-adsterra-id" data-adsterra-size="320x50"></ins>
+</div>
