@@ -169,7 +169,7 @@
         <div class="video-feed">
             <!-- Video card 1 -->
             <div class="video-card">
-                <a href="#" id="video1Link">
+                <a href="#">
                     <video controls>
                         <source src="video1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -188,7 +188,7 @@
 
             <!-- Video card 2 -->
             <div class="video-card">
-                <a href="#" id="video2Link">
+                <a href="#">
                     <video controls>
                         <source src="video2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -222,20 +222,15 @@
     </footer>
 
     <script>
-        // Function to show the modal when a link is clicked
-        function showAdModal(event) {
-            event.preventDefault(); // Prevent link navigation
-            document.getElementById("adModal").style.display = "block"; // Show the modal
+        // Function to show the modal automatically on page load
+        window.onload = function() {
+            document.getElementById("adModal").style.display = "block"; // Show the modal when page loads
         }
 
         // Function to close the modal
         function closeModal() {
             document.getElementById("adModal").style.display = "none"; // Hide the modal
         }
-
-        // Add event listeners for video links
-        document.getElementById("video1Link").addEventListener("click", showAdModal);
-        document.getElementById("video2Link").addEventListener("click", showAdModal);
 
         // Close modal if clicked outside
         window.onclick = function(event) {
