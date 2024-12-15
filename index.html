@@ -44,9 +44,9 @@
         }
 
         .amazon-product img {
-            width: 300px;
+            width: 250px;
             height: auto;
-            max-width: 100%; /* Ensures responsiveness */
+            max-width: 100%;
         }
 
         .amazon-product .details {
@@ -121,7 +121,7 @@
             }
 
             header {
-                font-size: 1.2rem; /* Slightly smaller header font */
+                font-size: 1.2rem;
             }
 
             .content {
@@ -130,11 +130,11 @@
             }
 
             .amazon-product .details h3 {
-                font-size: 16px; /* Adjust product title size */
+                font-size: 16px;
             }
 
             .amazon-product .details p {
-                font-size: 14px; /* Adjust description font size */
+                font-size: 14px;
             }
         }
     </style>
@@ -148,34 +148,72 @@
 <div class="content">
     <!-- Amazon Affiliate Section -->
     <h2 style="color: #3b82f6;">Recommended Products</h2>
-
-    <!-- Amazon Product 1 -->
-    <div class="amazon-product">
-        <img src="61zvA2rSfZL.__AC_SX300_SY300_QL70_FMwebp_-ezgif.com-webp-to-jpg-converter.jpg" alt="Product 1">
-        <div class="details">
-            <h3>Amazon Product 1</h3>
-            <p>Short description of the product goes here...</p>
-            <a href="https://amzn.to/49A81UV" target="_blank">Click here to view this product on Amazon</a>
-            <a href="https://amzn.to/49A81UV" class="mobile-link" target="_blank">Click here for Mobile Link</a>
-        </div>
+    
+    <!-- Dynamically Added Amazon Products (Example for 20 products) -->
+    <div id="products-container">
+        <!-- Example Products (add 20 products here using JavaScript) -->
     </div>
 
-    <!-- Additional products follow the same structure... -->
-
-    <!-- Adsterra Ad Section 1 -->
+    <!-- Adsterra Ad Section -->
     <div class="ad-container">
         <h2 style="color: #ff0050;">Advertisements</h2>
+        <!-- Adsterra Ad Example (7 ad links) -->
         <div class="adsterra-ad">
             <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
         </div>
+        <div class="adsterra-ad">
+            <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
+        </div>
+        <!-- Repeat for more ads -->
     </div>
 
-    <!-- More Adsterra Ad Sections... -->
+    <!-- Video Section -->
+    <h2 style="color: #3b82f6;">Featured Videos</h2>
+    <div class="video-container">
+        <!-- Add 10 video links here -->
+        <a href="https://www.youtube.com/watch?v=XXXXX" target="_blank">Watch Video 1</a><br>
+        <a href="https://www.youtube.com/watch?v=XXXXX" target="_blank">Watch Video 2</a><br>
+        <!-- Repeat for 10 videos -->
+    </div>
+
+    <!-- Desktop and Mobile Link -->
+    <h2 style="color: #ff0050;">Click Link</h2>
+    <a href="https://www.desktop-link.com" class="desktop-link" target="_blank">Click here for Desktop Link</a><br>
+    <a href="https://www.mobile-link.com" class="mobile-link" target="_blank">Click here for Mobile Link</a>
 </div>
 
 <footer>
     &copy; 2024 kimsokun. Powered by kwebsite2024.
 </footer>
+
+<script>
+// Array containing 20 Amazon product details
+const products = [
+    { name: "Product 1", image: "https://via.placeholder.com/250x250", link: "https://www.amazon.com/dp/B08K4DW2HT", description: "Description for product 1" },
+    { name: "Product 2", image: "https://via.placeholder.com/250x250", link: "https://www.amazon.com/dp/B08K4DW2HT", description: "Description for product 2" },
+    { name: "Product 3", image: "https://via.placeholder.com/250x250", link: "https://www.amazon.com/dp/B08K4DW2HT", description: "Description for product 3" },
+    // Add remaining products up to Product 20
+];
+
+function renderProducts() {
+    const container = document.getElementById('products-container');
+    products.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.classList.add('amazon-product');
+        productElement.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <div class="details">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <a href="${product.link}" target="_blank">Click here to view this product on Amazon</a>
+            </div>
+        `;
+        container.appendChild(productElement);
+    });
+}
+
+renderProducts();
+</script>
 
 </body>
 </html>
