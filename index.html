@@ -16,10 +16,23 @@
             text-align: center;
             padding: 50px;
             background-color: #ffcc00;
+            position: relative;
         }
-        .banner {
+        .banner-left, .banner-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 90px;
+            background-color: #eee;
+            display: inline-block;
             text-align: center;
-            margin: 20px 0;
+        }
+        .banner-left {
+            left: 10px;
+        }
+        .banner-right {
+            right: 10px;
         }
         .amazon-products {
             display: flex;
@@ -61,6 +74,33 @@
     <div class="header">
         <h1>Welcome to Amazon Deals</h1>
         <p>Still mid</p>
+
+        <!-- Banners (left and right) -->
+        <div class="banner-left">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'cb174fb71610439777bf43a5c7389f40',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//deeddrugtask.com/cb174fb71610439777bf43a5c7389f40/invoke.js"></script>
+        </div>
+
+        <div class="banner-right">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'cb174fb71610439777bf43a5c7389f40',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//deeddrugtask.com/cb174fb71610439777bf43a5c7389f40/invoke.js"></script>
+        </div>
     </div>
 
     <!-- Amazon Products -->
@@ -72,34 +112,6 @@
             <a href="https://amzn.to/49A81UV" target="_blank" class="button">Go to Amazon</a>
         </div>
         <!-- Add more products as needed -->
-    </div>
-
-    <!-- Adstrra Banner 1 -->
-    <div class="banner">
-        <script type="text/javascript">
-            atOptions = {
-                'key' : 'cb174fb71610439777bf43a5c7389f40',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//deeddrugtask.com/cb174fb71610439777bf43a5c7389f40/invoke.js"></script>
-    </div>
-
-    <!-- Adstrra Banner 2 -->
-    <div class="banner">
-        <script type="text/javascript">
-            atOptions = {
-                'key' : 'cb174fb71610439777bf43a5c7389f40',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//deeddrugtask.com/cb174fb71610439777bf43a5c7389f40/invoke.js"></script>
     </div>
 
     <!-- Videos Section -->
