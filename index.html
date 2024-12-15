@@ -12,6 +12,8 @@
             padding: 0;
             background-color: #121212;
             color: white;
+            display: flex;
+            justify-content: center;
         }
 
         header {
@@ -22,77 +24,34 @@
             font-size: 1.5rem;
             font-weight: bold;
             text-transform: uppercase;
+            width: 100%;
         }
 
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px;
+        }
+
+        /* Left Banner */
+        .left-banner, .right-banner {
+            width: 200px;
+            height: auto;
+            padding: 10px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Content Section */
         .content {
-            max-width: 900px;
-            margin: 20px auto;
+            width: 70%;
             padding: 20px;
             background-color: #1e1e1e;
             border-radius: 12px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
-        }
-
-        .amazon-product {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            border: 1px solid #444;
-            border-radius: 10px;
-            overflow: hidden;
-            background-color: #121212;
-        }
-
-        .amazon-product img {
-            width: 250px;
-            height: auto;
-            max-width: 100%;
-        }
-
-        .amazon-product .details {
-            flex: 1;
-            padding: 10px;
-            color: white;
-        }
-
-        .amazon-product .details h3 {
-            margin: 0;
-            font-size: 18px;
-            color: #ff0050;
-        }
-
-        .amazon-product .details p {
-            margin: 5px 0 10px;
-            color: #ccc;
-        }
-
-        .amazon-product .details a {
-            display: inline-block;
-            padding: 10px 15px;
-            background: linear-gradient(90deg, #ff0050, #3b82f6);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .amazon-product .details a:hover {
-            transform: scale(1.1);
-        }
-
-        .ad-container {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .adsterra-ad {
-            margin: 20px auto;
-            padding: 10px;
-            background-color: #1e1e1e;
-            border: 1px solid #444;
-            border-radius: 8px;
         }
 
         footer {
@@ -101,40 +60,23 @@
             background: linear-gradient(90deg, #3b82f6, #ff0050);
             color: white;
             margin-top: 20px;
+            width: 100%;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .amazon-product {
+            .container {
                 flex-direction: column;
-                text-align: center;
+                align-items: center;
             }
 
-            .amazon-product img {
+            .left-banner, .right-banner {
                 width: 100%;
-                max-height: 300px;
-            }
-
-            .amazon-product .details a {
-                display: block;
-                margin: 10px auto;
-            }
-
-            header {
-                font-size: 1.2rem;
+                margin-bottom: 20px;
             }
 
             .content {
-                margin: 10px;
-                padding: 15px;
-            }
-
-            .amazon-product .details h3 {
-                font-size: 16px;
-            }
-
-            .amazon-product .details p {
-                font-size: 14px;
+                width: 90%;
             }
         }
     </style>
@@ -142,78 +84,52 @@
 <body>
 
 <header>
-   Welcome to Amazon Deals
+    Welcome to Amazon Deals
 </header>
 
-<div class="content">
-    <!-- Amazon Affiliate Section -->
-    <h2 style="color: #3b82f6;">Recommended Products</h2>
-    
-    <!-- Dynamically Added Amazon Products (Example for 20 products) -->
-    <div id="products-container">
-        <!-- Example Products (add 20 products here using JavaScript) -->
+<div class="container">
+    <!-- Left Banner Ad -->
+    <div class="left-banner">
+        <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
     </div>
 
-    <!-- Adsterra Ad Section -->
-    <div class="ad-container">
-        <h2 style="color: #ff0050;">Advertisements</h2>
-        <!-- Adsterra Ad Example (7 ad links) -->
-        <div class="adsterra-ad">
-            <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
+    <!-- Content Section -->
+    <div class="content">
+        <h2 style="color: #3b82f6;">Recommended Products</h2>
+
+        <!-- Amazon Product 1 -->
+        <div class="amazon-product">
+            <img src="61zvA2rSfZL.__AC_SX300_SY300_QL70_FMwebp_-ezgif.com-webp-to-jpg-converter.jpg" alt="Product 1">
+            <div class="details">
+                <h3>Amazon Product 1</h3>
+                <p>Short description of the product goes here...</p>
+                <a href="https://amzn.to/49A81UV" target="_blank">Click here to view this product on Amazon</a>
+                <a href="https://amzn.to/49A81UV" class="mobile-link" target="_blank">Click here for Mobile Link</a>
+            </div>
         </div>
-        <div class="adsterra-ad">
-            <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
+
+        <!-- More Amazon Products... -->
+
+        <!-- Adsterra Ad Section 1 -->
+        <div class="ad-container">
+            <h2 style="color: #ff0050;">Advertisements</h2>
+            <div class="adsterra-ad">
+                <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
+            </div>
         </div>
-        <!-- Repeat for more ads -->
+
+        <!-- More Adsterra Ad Sections... -->
     </div>
 
-    <!-- Video Section -->
-    <h2 style="color: #3b82f6;">Featured Videos</h2>
-    <div class="video-container">
-        <!-- Add 10 video links here -->
-        <a href="https://www.youtube.com/watch?v=XXXXX" target="_blank">Watch Video 1</a><br>
-        <a href="https://www.youtube.com/watch?v=XXXXX" target="_blank">Watch Video 2</a><br>
-        <!-- Repeat for 10 videos -->
+    <!-- Right Banner Ad -->
+    <div class="right-banner">
+        <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
     </div>
-
-    <!-- Desktop and Mobile Link -->
-    <h2 style="color: #ff0050;">Click Link</h2>
-    <a href="https://www.desktop-link.com" class="desktop-link" target="_blank">Click here for Desktop Link</a><br>
-    <a href="https://www.mobile-link.com" class="mobile-link" target="_blank">Click here for Mobile Link</a>
 </div>
 
 <footer>
     &copy; 2024 kimsokun. Powered by kwebsite2024.
 </footer>
-
-<script>
-// Array containing 20 Amazon product details
-const products = [
-    { name: "Product 1", image: "https://via.placeholder.com/250x250", link: "https://www.amazon.com/dp/B08K4DW2HT", description: "Description for product 1" },
-    { name: "Product 2", image: "https://via.placeholder.com/250x250", link: "https://www.amazon.com/dp/B08K4DW2HT", description: "Description for product 2" },
-    { name: "Product 3", image: "https://via.placeholder.com/250x250", link: "https://www.amazon.com/dp/B08K4DW2HT", description: "Description for product 3" },
-    // Add remaining products up to Product 20
-];
-
-function renderProducts() {
-    const container = document.getElementById('products-container');
-    products.forEach(product => {
-        const productElement = document.createElement('div');
-        productElement.classList.add('amazon-product');
-        productElement.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <div class="details">
-                <h3>${product.name}</h3>
-                <p>${product.description}</p>
-                <a href="${product.link}" target="_blank">Click here to view this product on Amazon</a>
-            </div>
-        `;
-        container.appendChild(productElement);
-    });
-}
-
-renderProducts();
-</script>
 
 </body>
 </html>
