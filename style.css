@@ -183,4 +183,10 @@ footer {
     .amazon-product .details p {
         font-size: 14px;
     }
+
+    img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    }
 }
