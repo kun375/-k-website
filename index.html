@@ -10,12 +10,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212; /* TikTok's dark background */
+            background-color: #121212;
             color: white;
         }
 
         header {
-            background: linear-gradient(90deg, #ff0050, #3b82f6); /* Neon pink-to-blue gradient */
+            background: linear-gradient(90deg, #ff0050, #3b82f6);
             color: white;
             text-align: center;
             padding: 15px;
@@ -28,7 +28,7 @@
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #1e1e1e; /* Slightly lighter dark background */
+            background-color: #1e1e1e;
             border-radius: 12px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
         }
@@ -46,6 +46,7 @@
         .amazon-product img {
             width: 150px;
             height: auto;
+            max-width: 100%; /* Ensures responsiveness */
         }
 
         .amazon-product .details {
@@ -57,7 +58,7 @@
         .amazon-product .details h3 {
             margin: 0;
             font-size: 18px;
-            color: #ff0050; /* Neon pink */
+            color: #ff0050;
         }
 
         .amazon-product .details p {
@@ -68,7 +69,7 @@
         .amazon-product .details a {
             display: inline-block;
             padding: 10px 15px;
-            background: linear-gradient(90deg, #ff0050, #3b82f6); /* Gradient button */
+            background: linear-gradient(90deg, #ff0050, #3b82f6);
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -78,7 +79,7 @@
         }
 
         .amazon-product .details a:hover {
-            transform: scale(1.1); /* Subtle hover animation */
+            transform: scale(1.1);
         }
 
         .ad-container {
@@ -97,7 +98,7 @@
         footer {
             text-align: center;
             padding: 10px;
-            background: linear-gradient(90deg, #3b82f6, #ff0050); /* Reverse gradient for footer */
+            background: linear-gradient(90deg, #3b82f6, #ff0050);
             color: white;
             margin-top: 20px;
         }
@@ -117,6 +118,23 @@
             .amazon-product .details a {
                 display: block;
                 margin: 10px auto;
+            }
+
+            header {
+                font-size: 1.2rem; /* Slightly smaller header font */
+            }
+
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .amazon-product .details h3 {
+                font-size: 16px; /* Adjust product title size */
+            }
+
+            .amazon-product .details p {
+                font-size: 14px; /* Adjust description font size */
             }
         }
     </style>
@@ -141,90 +159,17 @@
         </div>
     </div>
 
-    <!-- Amazon Product 2 -->
-    <div class="amazon-product">
-        <img src="https://via.placeholder.com/150" alt="Product 2">
-        <div class="details">
-            <h3>Amazon Product 2</h3>
-            <p>Short description of the product goes here...</p>
-            <a href="https://www.amazon.com/dp/YOUR-AFFILIATE-LINK-2" target="_blank">Buy Now</a>
-        </div>
-    </div>
-
-    <!-- Amazon Product 3 -->
-    <div class="amazon-product">
-        <img src="https://via.placeholder.com/150" alt="Product 3">
-        <div class="details">
-            <h3>Amazon Product 2</h3>
-            <p>Short description of the product goes here...</p>
-            <a href="https://www.amazon.com/dp/YOUR-AFFILIATE-LINK-3" target="_blank">Buy Now</a>
-        </div>
-    </div>
-
-    <!-- Amazon Product 4 -->
-    <div class="amazon-product">
-        <img src="https://via.placeholder.com/150" alt="Product 4">
-        <div class="details">
-            <h3>Amazon Product 2</h3>
-            <p>Short description of the product goes here...</p>
-            <a href="https://www.amazon.com/dp/YOUR-AFFILIATE-LINK-4" target="_blank">Buy Now</a>
-        </div>
-    </div>
-
-    <!-- Amazon Product 5 -->
-    <div class="amazon-product">
-        <img src="https://via.placeholder.com/150" alt="Product 5">
-        <div class="details">
-            <h3>Amazon Product 2</h3>
-            <p>Short description of the product goes here...</p>
-            <a href="https://www.amazon.com/dp/YOUR-AFFILIATE-LINK-5" target="_blank">Buy Now</a>
-        </div>
-    </div>
-
-    <!-- Amazon Product 6 -->
-    <div class="amazon-product">
-        <img src="https://via.placeholder.com/150" alt="Product 6">
-        <div class="details">
-            <h3>Amazon Product 2</h3>
-            <p>Short description of the product goes here...</p>
-            <a href="https://www.amazon.com/dp/YOUR-AFFILIATE-LINK-6" target="_blank">Buy Now</a>
-        </div>
-    </div>
+    <!-- Additional products follow the same structure... -->
 
     <!-- Adsterra Ad Section 1 -->
     <div class="ad-container">
         <h2 style="color: #ff0050;">Advertisements</h2>
-        <!-- Adsterra Ad Code -->
         <div class="adsterra-ad">
             <script async type="text/javascript" src="https://www.profitablecpmrate.com/YOUR-ADSTERRE-KEY"></script>
         </div>
     </div>
 
-    <!-- Adsterra Ad Section 2 -->
-    <div class="ad-container">
-        <h2 style="color: #ff0050;">Advertisements</h2>
-        <!-- Adsterra Ad Code -->
-        <div class="adsterra-ad">
-            <script async type="text/javascript" src="https://www.profitablecpmrate.com/YOUR-ADSTERRE-KEY"></script>
-        </div>
-    </div>
-
-    <!-- Adsterra Ad Section 3 -->
-    <div class="ad-container">
-        <h2 style="color: #ff0050;">Advertisements</h2>
-        <!-- Adsterra Ad Code -->
-        <div class="adsterra-ad">
-            <script async type="text/javascript" src="https://www.profitablecpmrate.com/YOUR-ADSTERRE-KEY"></script>
-        </div>
-    </div>
-    <!-- Adsterra Ad Section 4 -->
-    <div class="ad-container">
-        <h2 style="color: #ff0050;">Advertisements</h2>
-        <!-- Adsterra Ad Code -->
-        <div class="adsterra-ad">
-            <script async type="text/javascript" src="https://www.profitablecpmrate.com/YOUR-ADSTERRE-KEY"></script>
-        </div>
-    </div>
+    <!-- More Adsterra Ad Sections... -->
 </div>
 
 <footer>
