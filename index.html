@@ -3,229 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page - Website by @K</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Amazon Deals & Adsterra Ads</title>
     <style>
-        /* Basic styling for mobile responsiveness */
+        /* General Styling */
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* TikTok's dark background */
+            color: white;
         }
 
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #333;
+            background: linear-gradient(90deg, #ff0050, #3b82f6); /* Neon pink-to-blue gradient */
             color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
-        .logo img {
-            width: 40px;
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1e1e1e; /* Slightly lighter dark background */
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+        }
+
+        .amazon-product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #121212;
+        }
+
+        .amazon-product img {
+            width: 150px;
             height: auto;
         }
 
-        .navigation {
-            display: none; /* Hide for mobile */
-            flex-direction: column;
+        .amazon-product .details {
+            flex: 1;
+            padding: 10px;
+            color: white;
         }
 
-        .navigation a {
+        .amazon-product .details h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #ff0050; /* Neon pink */
+        }
+
+        .amazon-product .details p {
+            margin: 5px 0 10px;
+            color: #ccc;
+        }
+
+        .amazon-product .details a {
+            display: inline-block;
+            padding: 10px 15px;
+            background: linear-gradient(90deg, #ff0050, #3b82f6); /* Gradient button */
             color: white;
             text-decoration: none;
-            margin: 5px 0;
-        }
-
-        .menu-toggle {
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .video-feed {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .video-card {
-            width: 100%;
-            max-width: 320px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        video {
-            width: 100%;
-            height: auto;
-        }
-
-        .video-info {
-            padding: 10px;
-        }
-
-        .video-actions button {
-            margin: 5px;
-            padding: 5px 10px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
             border-radius: 5px;
-            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .amazon-product .details a:hover {
+            transform: scale(1.1); /* Subtle hover animation */
+        }
+
+        .ad-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .adsterra-ad {
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #1e1e1e;
+            border: 1px solid #444;
+            border-radius: 8px;
         }
 
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #333;
+            background: linear-gradient(90deg, #3b82f6, #ff0050); /* Reverse gradient for footer */
             color: white;
             margin-top: 20px;
         }
 
-        /* Media queries for mobile responsiveness */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .navigation {
-                display: flex;
+            .amazon-product {
+                flex-direction: column;
+                text-align: center;
             }
 
-            .menu-toggle {
+            .amazon-product img {
+                width: 100%;
+                max-height: 150px;
+            }
+
+            .amazon-product .details a {
                 display: block;
+                margin: 10px auto;
             }
-        }
-
-        @media (min-width: 769px) {
-            .menu-toggle {
-                display: none;
-            }
-
-            .navigation {
-                display: flex;
-                gap: 15px;
-            }
-        }
-
-        .adsterra-ad {
-            margin: 20px auto;
-            text-align: center;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="Designer-_2_.ico" alt="Website Logo" />
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div class="navigation">
-            <a href="#">Home</a>
-            <a href="#">Explore</a>
-            <a href="#">Messages</a>
-            <a href="#">Profile</a>
-        </div>
-    </header>
 
-    <main>
-        <!-- First Ad Code (Profitable CPM Rate) -->
+<header>
+    Amazon Deals & Adsterra Ads
+</header>
+
+<div class="content">
+    <!-- Amazon Affiliate Section -->
+    <h2 style="color: #3b82f6;">Recommended Products</h2>
+
+    <!-- Amazon Product 1 -->
+    <div class="amazon-product">
+        <img src="https://via.placeholder.com/150" alt="Product 1">
+        <div class="details">
+            <h3>Amazon Product 1</h3>
+            <p>Short description of the product goes here...</p>
+            <a href="https://www.amazon.com/dp/YOUR-AFFILIATE-LINK-1" target="_blank">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Amazon Product 2 -->
+    <div class="amazon-product">
+        <img src="https://via.placeholder.com/150" alt="Product 2">
+        <div class="details">
+            <h3>Amazon Product 2</h3>
+            <p>Short description of the product goes here...</p>
+            <a href="https://www.amazon.com/dp/YOUR-AFFILIATE-LINK-2" target="_blank">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Adsterra Ad Section -->
+    <div class="ad-container">
+        <h2 style="color: #ff0050;">Advertisements</h2>
+        <!-- Adsterra Ad Code -->
         <div class="adsterra-ad">
-            <script async type="text/javascript" src=""></script>
+            <script async type="text/javascript" src="https://www.profitablecpmrate.com/YOUR-ADSTERRE-KEY"></script>
         </div>
+    </div>
+</div>
 
-        <!-- Additional Ad 1: Above Video Feed -->
-        <div class="adsterra-ad">
-            <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
-        </div>
+<footer>
+    &copy; 2024 Your Website. Powered by Amazon Affiliates & Adsterra.
+</footer>
 
-        <div class="video-feed">
-            <!-- Video card 1 -->
-            <div class="video-card">
-                <video controls>
-                    <source src="video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-info">
-                    <h3>Video Title 1</h3>
-                    <p>Description of the video...</p>
-                    <div class="video-actions">
-                        <button>Like</button>
-                        <button>Comment</button>
-                        <button>Share</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Ad 2: Between Videos -->
-            <div class="adsterra-ad">
-                <script async type="text/javascript" src="https://deeddrugtask.com/mm1b2eeyf?key=a6495ebda76f390d03fd4c87523a4d80"></script>
-            </div>
-
-            <!-- Video card 2 -->
-            <div class="video-card">
-                <video controls>
-                    <source src="video2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-info">
-                    <h3>Video Title 2</h3>
-                    <p>Description of the video...</p>
-                    <div class="video-actions">
-                        <button>Like</button>
-                        <button>Comment</button>
-                        <button>Share</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video card 3 -->
-            <div class="video-card">
-                <video controls>
-                    <source src="video3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-info">
-                    <h3>Video Title 3</h3>
-                    <p>Description of the video...</p>
-                    <div class="video-actions">
-                        <button>Like</button>
-                        <button>Comment</button>
-                        <button>Share</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Additional Ad 3: Above Footer -->
-        <div class="adsterra-ad">
-         <script type="text/javascript">
-	atOptions = {
-		'key' : 'f029b2f0dbdfa3a4b6f0ef8da35eb887',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//deeddrugtask.com/f029b2f0dbdfa3a4b6f0ef8da35eb887/invoke.js"></script>
-            
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Website by @K</p>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            const nav = document.querySelector('.navigation');
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex'; 
-        }
-    </script>
 </body>
 </html>
