@@ -1,207 +1,186 @@
-/* General resets */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body & Font */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
     margin: 0;
-}
-
-/* Header */
-header {
-    background-color: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header .logo img {
-    height: 40px;
-}
-
-header .navigation {
-    display: flex;
-    gap: 15px;
-}
-
-header .navigation a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header .navigation a:hover {
-    color: #fe2c55;
-}
-
-header .menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-}
-
-/* Video Feed */
-main {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.video-feed {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-.video-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.video-card:hover {
-    transform: scale(1.05);
-}
-
-.video-card video {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.video-info {
-    padding: 10px;
-}
-
-.video-info h3 {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-.video-info p {
-    font-size: 0.9em;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-.video-actions button {
-    background-color: #fe2c55;
+    padding: 0;
+    background-color: #121212;
     color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 0.9em;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.video-actions button:hover {
-    background-color: #d11b44;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: #fff;
+header {
+    background: linear-gradient(90deg, #ff0050, #3b82f6);
+    color: white;
     text-align: center;
     padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Banner Section */
+.banner {
     width: 100%;
+    display: flex;
+    justify-content: center; /* Center the banners horizontally */
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #3b82f6, #ff0050);
+    margin-top: 20px;
+    gap: 20px; /* Add space between the banners */
+}
+
+.banner iframe {
+    width: 100%;
+    max-width: 728px; /* Ensure that the iframe size does not exceed the max width */
+    height: 90px; /* Set the height of the banner */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Style for smaller banners (second banner with 320x50 size) */
+.banner.small-banner iframe {
+    height: 50px;
+    max-width: 320px;
+}
+
+/* Adsterra Ad Section */
+.ad-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.adsterra-ad {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 8px;
+}
+
+/* Content Styling */
+.content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.amazon-product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #121212;
+}
+
+.amazon-product img {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+}
+
+.amazon-product .details {
+    flex: 1;
+    padding: 10px;
+    color: white;
+}
+
+.amazon-product .details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #ff0050;
+}
+
+.amazon-product .details p {
+    margin: 5px 0 10px;
+    color: #ccc;
+}
+
+.amazon-product .details a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, #ff0050, #3b82f6);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.amazon-product .details a:hover {
+    transform: scale(1.1);
+}
+
+.button {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #ff0050, #3b82f6);
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 20px auto;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(90deg, #3b82f6, #ff0050);
+    color: white;
     margin-top: 20px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        font-size: 1.5rem; /* Adjust header font */
     }
 
-    header .navigation {
-        display: none;
+    .banner {
         flex-direction: column;
+        padding: 10px;
+    }
+
+    .banner iframe {
         width: 100%;
+        margin-bottom: 10px;
     }
 
-    header .menu-toggle {
+    .amazon-product {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .amazon-product img {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .amazon-product .details a {
         display: block;
+        margin: 10px auto;
     }
 
-    header .navigation a {
-        padding: 10px;
-        border-top: 1px solid #555;
-        width: 100%;
+    .content {
+        margin: 10px;
+        padding: 15px;
     }
 
-    main {
-        padding: 10px;
+    .amazon-product .details h3 {
+        font-size: 16px;
     }
-}
 
-/* Show navigation menu when toggled */
-header .navigation.show {
-    display: flex;
-}
-
-/* Search Section */
-.search-container {
-    margin: 20px;
-    text-align: center;
-}
-
-#searchInput {
-    padding: 10px;
-    font-size: 16px;
-    margin-right: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-.search-results {
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-#searchResults {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-#searchResults li {
-    background-color: #fff;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .amazon-product .details p {
+        font-size: 14px;
+    }
 }
