@@ -114,6 +114,22 @@
             transform: scale(1.1);
         }
 
+        .button {
+            padding: 12px 20px;
+            background: linear-gradient(90deg, #ff0050, #3b82f6);
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: inline-block;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
         footer {
             text-align: center;
             padding: 10px;
@@ -187,6 +203,9 @@
     </div>
 </div>
 
+<!-- Button for Amazon Product (desktop/mobile redirection) -->
+<a href="#" class="button" id="amazonButton">Go to Amazon Product</a>
+
 <div class="content">
     <!-- Amazon Affiliate Section -->
     <h2 style="color: #3b82f6;">Recommended Products</h2>
@@ -214,6 +233,25 @@
 <footer>
     &copy; 2024 kimsokun. Powered by kwebsite2024.
 </footer>
+
+<script>
+    // JavaScript to handle redirection based on device type
+    document.getElementById('amazonButton').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link action
+
+        // Check if the user is on a mobile device
+        var userAgent = navigator.userAgent.toLowerCase();
+        var isMobile = /iphone|ipod|ipad|android/.test(userAgent);
+
+        if (isMobile) {
+            // Redirect to mobile Amazon link
+            window.location.href = 'https://m.amazon.com/dp/B07Y5R7N6H'; // Replace with actual mobile link
+        } else {
+            // Redirect to desktop Amazon link
+            window.location.href = 'https://www.amazon.com/dp/B07Y5R7N6H'; // Replace with actual desktop link
+        }
+    });
+</script>
 
 </body>
 </html>
