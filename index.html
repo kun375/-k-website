@@ -12,46 +12,106 @@
             padding: 0;
             background-color: #121212;
             color: white;
-            display: flex;
-            justify-content: center;
         }
 
         header {
             background: linear-gradient(90deg, #ff0050, #3b82f6);
             color: white;
             text-align: center;
-            padding: 15px;
-            font-size: 1.5rem;
+            padding: 20px;
+            font-size: 2rem;
             font-weight: bold;
             text-transform: uppercase;
-            width: 100%;
+            position: relative;
         }
 
-        .container {
+        /* Banner Section */
+        .banner {
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            width: 100%;
-            max-width: 1200px;
-            margin: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #3b82f6, #ff0050);
+            margin-top: 20px;
         }
 
-        /* Left Banner */
-        .left-banner, .right-banner {
-            width: 200px;
-            height: auto;
+        .banner img {
+            width: 48%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Adsterra Ad Section */
+        .ad-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .adsterra-ad {
+            margin: 20px auto;
             padding: 10px;
             background-color: #1e1e1e;
+            border: 1px solid #444;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
-        /* Content Section */
+        /* Content Styling */
         .content {
-            width: 70%;
+            max-width: 900px;
+            margin: 20px auto;
             padding: 20px;
             background-color: #1e1e1e;
             border-radius: 12px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+        }
+
+        .amazon-product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #121212;
+        }
+
+        .amazon-product img {
+            width: 300px;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .amazon-product .details {
+            flex: 1;
+            padding: 10px;
+            color: white;
+        }
+
+        .amazon-product .details h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #ff0050;
+        }
+
+        .amazon-product .details p {
+            margin: 5px 0 10px;
+            color: #ccc;
+        }
+
+        .amazon-product .details a {
+            display: inline-block;
+            padding: 10px 15px;
+            background: linear-gradient(90deg, #ff0050, #3b82f6);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .amazon-product .details a:hover {
+            transform: scale(1.1);
         }
 
         footer {
@@ -60,23 +120,50 @@
             background: linear-gradient(90deg, #3b82f6, #ff0050);
             color: white;
             margin-top: 20px;
-            width: 100%;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
+            header {
+                font-size: 1.5rem; /* Adjust header font */
             }
 
-            .left-banner, .right-banner {
+            .banner {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .banner img {
                 width: 100%;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
+            }
+
+            .amazon-product {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .amazon-product img {
+                width: 100%;
+                max-height: 300px;
+            }
+
+            .amazon-product .details a {
+                display: block;
+                margin: 10px auto;
             }
 
             .content {
-                width: 90%;
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .amazon-product .details h3 {
+                font-size: 16px;
+            }
+
+            .amazon-product .details p {
+                font-size: 14px;
             }
         }
     </style>
@@ -84,46 +171,43 @@
 <body>
 
 <header>
-    Welcome to Amazon Deals
+   Welcome to Amazon Deals
 </header>
 
-<div class="container">
-    <!-- Left Banner Ad -->
-    <div class="left-banner">
+<!-- Banner Section with Adsterra Ads -->
+<div class="banner">
+    <img src="banner1.jpg" alt="Banner 1">
+    <img src="banner2.jpg" alt="Banner 2">
+</div>
+
+<!-- Adsterra Ad Section -->
+<div class="ad-container">
+    <div class="adsterra-ad">
         <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
     </div>
+</div>
 
-    <!-- Content Section -->
-    <div class="content">
-        <h2 style="color: #3b82f6;">Recommended Products</h2>
+<div class="content">
+    <!-- Amazon Affiliate Section -->
+    <h2 style="color: #3b82f6;">Recommended Products</h2>
 
-        <!-- Amazon Product 1 -->
-        <div class="amazon-product">
-            <img src="61zvA2rSfZL.__AC_SX300_SY300_QL70_FMwebp_-ezgif.com-webp-to-jpg-converter.jpg" alt="Product 1">
-            <div class="details">
-                <h3>Amazon Product 1</h3>
-                <p>Short description of the product goes here...</p>
-                <a href="https://amzn.to/49A81UV" target="_blank">Click here to view this product on Amazon</a>
-                <a href="https://amzn.to/49A81UV" class="mobile-link" target="_blank">Click here for Mobile Link</a>
-            </div>
+    <!-- Amazon Product 1 -->
+    <div class="amazon-product">
+        <img src="61zvA2rSfZL.__AC_SX300_SY300_QL70_FMwebp_-ezgif.com-webp-to-jpg-converter.jpg" alt="Product 1">
+        <div class="details">
+            <h3>Amazon Product 1</h3>
+            <p>Short description of the product goes here...</p>
+            <a href="https://amzn.to/49A81UV" target="_blank">Click here to view this product on Amazon</a>
         </div>
-
-        <!-- More Amazon Products... -->
-
-        <!-- Adsterra Ad Section 1 -->
-        <div class="ad-container">
-            <h2 style="color: #ff0050;">Advertisements</h2>
-            <div class="adsterra-ad">
-                <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
-            </div>
-        </div>
-
-        <!-- More Adsterra Ad Sections... -->
     </div>
 
-    <!-- Right Banner Ad -->
-    <div class="right-banner">
-        <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
+    <!-- Additional Amazon Products... -->
+
+    <!-- Adsterra Ad Section 2 -->
+    <div class="ad-container">
+        <div class="adsterra-ad">
+            <script type='text/javascript' src='//deeddrugtask.com/fa/b5/a3/fab5a306dd6cd01add4f3285c65fca08.js'></script>
+        </div>
     </div>
 </div>
 
